@@ -2,14 +2,14 @@
 
 Preencha os dados abaixo para identificar a autoria do trabalho.
 
-- Nome: *<insira seu nome aqui>*
-- Email: *<insira seu email aqui>*
+- Nome: *Thiago de Oliveira Cordeiro*
+- Email: *thiagoty52@gmail.com*
 - Turma: *<insira sua turma aqui>*
 
 # Questões Finalizadas
 
-- [ ] Negativos 5
-- [ ] Soma Vizinhos
+- [ X ] Negativos 5
+- [ X ] Soma Vizinhos
 - [ ] Intervalos
 - [ ] Fibonacci
 - [ ] Minmax
