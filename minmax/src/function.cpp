@@ -1,4 +1,5 @@
 #include "function.h"
+#include <utility>
 
 /*! 
  * Finds and returns a pair with the first instance of the smallest element
@@ -10,10 +11,43 @@
  * @return A pair of indexes to the first smallest and last largest values.
  */
 
-std::pair<int,int> min_max( int V[], size_t n )
+std::pair<int,int> min_max( int V[], std::size_t n )
 {
-    // TODO: Adicione aqui sua solução.
+    pair<int, int> VALUES; // Compound variable that will contain the values ​​of the positions
+    std::size_t smaller; // Variable that will contain the smallest value
+    std::size_t larger; // Variable that will contain the largest value
 
-    // TODO: Isso é apenas um STUB. Substitua com seu retorno correto.
-    return { -1, -1 };
+    // If empty
+    if (n == 0) 
+    {
+        VALUES.first = -1;
+        VALUES.second = -1;
+        return VALUES;
+    }
+
+
+    // This loop cycles through all elements of the array
+    for(int i = 0; i < n; i++) {
+        if (i == 0)
+        {
+            larger = i;
+            smaller = i;
+        } else {
+            if (V[i] > V[larger] || V[i] == V[larger])
+            {
+                larger = i;
+            } 
+
+            if (V[i] < V[smaller])
+            {
+                smaller = i;
+            }
+        }
+    }
+
+    VALUES.first = smaller;
+    VALUES.second = larger;
+
+    return VALUES;
 }
+
