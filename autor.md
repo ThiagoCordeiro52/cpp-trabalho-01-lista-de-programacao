@@ -15,7 +15,7 @@ Preencha os dados abaixo para identificar a autoria do trabalho.
 - [ X ] Minmax
 - [ X ] Inverter
 - [ X ] Filtragem
-- [ ] Ponto em Retângulo 1
+- [ X ] Ponto em Retângulo 1
 - [ ] Ponto em Retângulo 2
 - [ ] Interseção de Retângulos
 
