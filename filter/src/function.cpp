@@ -14,8 +14,28 @@
  */
 int * filter( int * first, int * last )
 {
-    // TODO: coloque aqui o seu código-solução.
-    
-    // TODO: substitua o retorno de acordo com a solução. Isso é somente um STUB temporário.
-    return nullptr;
+    int auxiliary; // Auxiliary variable that will receive individual values ​​from the array.
+
+    // Loop that will traverse the entire array
+    while (first != last) { 
+        //If we find a value less than or equal to zero, we shift all other values ​​to the right one place 
+        // to the left, while the value that is less than or equal to zero is shifted to the last position.
+        // And we only walk the array if the value that stays in the position is not less than or equal to 0.
+        if(* first <= 0) {
+            for (int * i = first; i != last; i += 1) {
+                if (i == (last - 1)) {
+                    break;
+                }
+                auxiliary = * i;
+                * i = * (i + 1);
+                * (i + 1) = auxiliary;
+            }
+
+            last -= 1;
+        } else {
+            first += 1;
+        }
+        
+    }
+    return last;
 }
